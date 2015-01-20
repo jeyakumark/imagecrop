@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capture Image</title> 
+ 	<script type="text/javascript" charset="utf-8" src="mylibs/phonegap-1.4.1.js"></script>
+ 	
+ 	<link rel="stylesheet" href="mylibs/jquery.mobile-1.0/jquery.mobile-1.0.min.css" />
+ 	<script type="text/javascript" src="mylibs/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="mylibs/jquery.mobile-1.0/jquery.mobile-1.0.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <body>
+  	<!-- Start of home page -->
+  	<div data-role="page">
+  		<div data-role="header" data-position="fixed">
+  			<h1>Capture image</h1>
+		</div>
+		<div data-role="content">			
+			<a data-role="button" id="capture">Capture image</a>
+			<a data-role="button" id="getImg">Get from library</a>
+			<a data-role="button" id="captureVideo">Capture Video</a>
+		    <div id="image_container" style="display:none;">
+		    	<img style="display:none;width:260px;height:260px;" id="image" src="" />
+				<p>Crop Controls</p>
+				<div data-role="fieldcontain">
+					<label for="x">X: </label><input type="text" name="x">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="y">Y: </label><input type="text" name="y">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="width">Width: </label><input type="text" name="width">
+				</div>
+				<div data-role="fieldcontain">	
+					<label for="height">Height: </label><input type="text" name="height">
+				</div>
+				<a data-role="button" id="crop">Crop</a>
+				<canvas id="myCanvas" width="260" height="260">
+		        </canvas>
+		    </div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>Footer</h1>
+		</div>
+	</div>
+	<!-- /home page -->
+  </body>
+</html>
